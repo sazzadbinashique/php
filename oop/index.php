@@ -48,7 +48,7 @@ echo $mercedes-> color;
 echo "<br>";
 echo $bmw-> comp;
 echo "<br>";
-echo $mercedes-> com;p
+echo $mercedes-> comp;
 echo "<hr>";
 
 
