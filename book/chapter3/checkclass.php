@@ -6,7 +6,8 @@
 	class ParentClass 
 	{
 		public function getClass(){
-			echo get_class();// using "no $this"
+			// echo get_class();// using "no $this" or 
+			echo get_class($this); // useing "$this"
 		}
 		
 	}
