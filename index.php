@@ -12,7 +12,7 @@ class Car {
 	public $hasSunRoof = true; 
 
 	public function hello(){
-		return "beep";
+		return "Hello world";
 	}
 }
 
