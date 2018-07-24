@@ -12,6 +12,7 @@
 	<ul style="text-align: center;" >
 		<li ><a href="iterator.php">Iterator pattern</a></li>
 		<li ><a href="observable.php">Observer pattern</a></li>
+		<li ><a href="reflection.php">Reflection Class</a></li>
 	</ul>
 	
 </div>
