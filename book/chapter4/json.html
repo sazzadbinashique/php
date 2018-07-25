@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Json Example</title>
+	<script type="text/javascript" lanugage = "javascript">
+		/* json data types */ 
+		/* array type */ 
+
+		var object1 = { "language": "Java", "author": "Herbert schildt" };
+		document.write("<h1> Json with javascript example</h1>");
+		document.write("<br>");
+		document.write("<h3> Language = " + object1.language+"</h3>");
+		document.write("<h3> Author = " + object1.author+"</h3>");
+
+		var object2 = { "language": "PHP", "author": "Hasin Hayder" };
+		document.write("<br>");
+		document.write("<h3> Language = " + object2.language+"</h3>");
+		document.write("<h3> Author = " + object2.author+"</h3>");
+
+		document.write("<hr/>");
+		document.write(object2.language + " Programing language can be studied");
+		document.write("<hr/>");
+
+
+		/* boolean */
+
+		var obj = {name: 'Amit', marks: 97, distinction: true}
+		document.write(" Marks = "+ obj.name+ " ");
+		document.write("<br>");
+		document.write(" Marks = "+ obj.marks+ " ");
+		document.write("<br>");
+		document.write(" Marks = "+ obj.distinction+ " ");
+
+		var objnumber = { marks: 97}
+		document.write("<h2> Marks = "+ obj.marks+ " </h2>");
+
+
+		/* null  */
+
+		var i = 1;
+
+		if(i == null){
+		   document.write("<h1>value is null</h1>");
+		} else{
+		   document.write("<h1>value is not null</h1>");
+		}
+
+
+		/* Whitespace */ 
+
+		var objwhitespace = { "name": "Sazzad Bin Ashique"};
+		document.write("<h2>Name = "+ objwhitespace.name+"</h2>");
+		var objwhitespace2 = { "name": "Sazzadbinashique"};
+		document.write("<h2>Name = "+ objwhitespace2.name+"</h2>");
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
