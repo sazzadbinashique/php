@@ -1,6 +1,6 @@
 <?php 
 
-include_once('db.php');
+// include_once('db.php');
 
 header('content_type: application/json');
 
@@ -14,7 +14,8 @@ switch ($request) {
 		echo '{"name": "Put ... Rest Api"}';
 		break;
 	case 'POST':
-		echo '{"name": "Post ... Rest Api"}';
+		$data = json_decode(file_get_contents('php://input'),ture);
+		postMethod($data);
 		break;
 
 	case 'DELETE':
@@ -43,6 +44,24 @@ function getMethod(){
 		echo '{"result": "Data not found"}';
 	}
 
+
+}
+
+
+function postMethod($data){
+include('db.php');
+
+$name = $data["name"];
+$age = $data["age"];
+$email=$data["email"];
+
+$sql = "INSERT INTO user ( name, age, email, created_at) VALUES ('$name', '$age', '$email', NOW())";
+
+if (mysqli_query($conn,$sql)) {
+	echo '{"result": "data inserted"}';
+}else {
+	echo '{"result": "data not inserted"}';
+}
 
 }
 
