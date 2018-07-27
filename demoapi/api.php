@@ -11,7 +11,8 @@ switch ($request) {
 		 getMethod();
 		break;
 	case 'PUT':
-		echo '{"name": "Put ... Rest Api"}';
+		$data = json_decode(file_get_contents('php://input'),ture);
+		putMethod($data);
 		break;
 	case 'POST':
 		$data = json_decode(file_get_contents('php://input'),ture);
@@ -25,6 +26,9 @@ switch ($request) {
 		# code...
 		break;
 }
+
+// get data 
+
 
 function getMethod(){
 	 include('db.php');
@@ -47,6 +51,7 @@ function getMethod(){
 
 }
 
+// inserted data 
 
 function postMethod($data){
 include('db.php');
@@ -64,6 +69,27 @@ if (mysqli_query($conn,$sql)) {
 }
 
 }
+
+// updated data 
+
+function putMethod($data){
+include('db.php');
+
+$id = $data["id"];
+$name = $data["name"];
+$age = $data["age"];
+$email=$data["email"];
+
+$sql = "UPDATE user SET name = '$name', age ='$age', email = '$email', created_at= NOW() WHERE id ='$id'";
+
+if (mysqli_query($conn,$sql)) {
+	echo '{"result": "Updated succesfully"}';
+}else {
+	echo '{"result": " not Updated"}';
+}
+
+}
+
 
 
 ?>
