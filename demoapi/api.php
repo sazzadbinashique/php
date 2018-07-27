@@ -20,14 +20,15 @@ switch ($request) {
 		break;
 
 	case 'DELETE':
-		echo '{"name": "Delete ... Rest Api"}';
+		$data = json_decode(file_get_contents('php://input'),ture);
+		deleteMethod($data);
 		break;
 	default:
 		# code...
 		break;
 }
 
-// get data 
+// get method created here 
 
 
 function getMethod(){
@@ -51,7 +52,7 @@ function getMethod(){
 
 }
 
-// inserted data 
+// inserted method created here
 
 function postMethod($data){
 include('db.php');
@@ -62,15 +63,15 @@ $email=$data["email"];
 
 $sql = "INSERT INTO user ( name, age, email, created_at) VALUES ('$name', '$age', '$email', NOW())";
 
-if (mysqli_query($conn,$sql)) {
-	echo '{"result": "data inserted"}';
-}else {
-	echo '{"result": "data not inserted"}';
-}
+	if (mysqli_query($conn,$sql)) {
+		echo '{"result": "data inserted"}';
+	}else {
+		echo '{"result": "data not inserted"}';
+	}
 
 }
 
-// updated data 
+// updated method crate here
 
 function putMethod($data){
 include('db.php');
@@ -82,13 +83,31 @@ $email=$data["email"];
 
 $sql = "UPDATE user SET name = '$name', age ='$age', email = '$email', created_at= NOW() WHERE id ='$id'";
 
+	if (mysqli_query($conn,$sql)) {
+		echo '{"result": "Updated succesfully"}';
+	}else {
+		echo '{"result": " not Updated"}';
+	}
+
+}
+
+// delete method crate here
+
+function deleteMethod($data){
+include('db.php');
+
+$id = $data["id"];
+
+$sql = "DELETE FROM user WHERE id ='$id'";
+
 if (mysqli_query($conn,$sql)) {
-	echo '{"result": "Updated succesfully"}';
+	echo '{"result": "Deleted data succesfully"}';
 }else {
-	echo '{"result": " not Updated"}';
+	echo '{"result": " not Deleted"}';
 }
 
 }
+
 
 
 
