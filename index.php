@@ -34,6 +34,7 @@
 		<li><a href="../php/image_upload">image_upload</a></li>
 		<li><a href="../php/oop/index.php">oop</a></li>
 		<li><a href="../php/slimapp">slimapp</a></li>
+		<li><a href="../php/phpstirnfunction">PHP Strin Function</a></li>
 	</ul>
 </div>
 
