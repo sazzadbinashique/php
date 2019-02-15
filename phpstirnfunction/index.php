@@ -76,16 +76,152 @@
       </div> 
 
 
+      <div class="container">
+        <div class="card">
+          <h3>This simple array </h3>
+          <p>
+            <?php 
+              $mobile=array("Samsung", "Huawei", "Nokia" );
+
+              echo "I like " . $mobile[0] . ", " . $mobile[1] . ", " . $mobile[2] . ".";
+
+            ?>
+          </p>
+        </div>
+
+         <div class="card">
+          <h3>As the name suggest array unique function is remove duplicate value in an array </h3>
+          <p>
+            <?php 
+              $a = array("a"=>"100", "b"=> "50", "c"=>"100" );
+                $result = array_unique($a);
+              ?>
+              <pre><?php  print_r ($result);?>                          
+              </pre>
+          </p>
+        </div>
+        
+        <div class="card">
+          <h3>This array_diff function is used konow difference between two or more arrays</h3>
+          <p>
+            <?php 
+            $a1 = array( "1"=>"banana", "2"=>"apple", "3"=>"orange");
+            $a2 = array( "1"=>"banana", "2"=>"apple", "3"=>"fruits");
+
+            $result=array_diff($a1,$a2);
+            ?>
+
+            <pre><?php print_r ($result); ?></pre>
+          </p>
+        </div>
 
 
+         <div class="card">
+        <h3>Array_merge() is used to merge two or more array to one array</h3>
+        <p>
+           <?php 
+            $a1 = array( "1"=>"banana", "2"=>"apple", "3"=>"orange");
+            $a2 = array( "1"=>"Mango", "2"=>"grapes", "3"=>"fruits");
+
+            $result=array_merge($a1,$a2);
+            ?> 
+
+            <pre><?php print_r ($result); ?></pre>
+
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>This fucntion is used to generate random keys form array</h3>
+        <p>
+          <?php 
+            $input = array("100", "200", "500", "5000");
+            $random_keys=array_rand($input, 4); 
+            echo $input[$random_keys[0]]."<br>";
+            echo $input[$random_keys[1]]."<br>";
+            echo $input[$random_keys[2]]."<br>";
+            echo $input[$random_keys[3]];
+          ?>
+        </p>
+      </div>
+        
 
 
+        <div class="card">
+          <h3>This array reserve funciton is reverse the order of array</h3>
+          <p>
+           <?php
+           $a=array("a"=>"Volvo","b"=>"BMW","c"=>"Toyota");
+           ?>
+           <pre><?php print_r(array_reverse($a)); ?> </pre>
+           
+
+          </p>
+        </div>
+        
+        <div class="card">
+          <h3>This fucntion is used to serach a value in array</h3>
+          <p>
+            <?php
+           $a=array("a"=>"red","b"=>"green","c"=>"blue");
+           echo array_search("blue",$a);
+           ?>
+          </p>
+        </div>
+        <div class="card">
+          <h3>array_sum function is  used to sum of all value in array</h3>
+          <p>
+            <?php 
+            $input=array("23", "34", "56"); 
+            echo array_sum($input);
+            ?>
+
+          </p>
+          </div>
 
 
+      <div class="card">
+        <h3>This array chunk functin is mostly used to spit an array to chnuks</h3>
+        <p>
+           <?php 
+            $cars=array("Volvo","BMW","Toyota","Honda","Mercedes","Farari");
+            $result=array_chunk($cars, 3);
+            ?> 
+            <pre><?php print_r ($result); ?></pre>
+
+        </p>
+      </div>
 
 
+      <div class="card">
+        <h3>This Array Pop function used to remove element of array</h3>
+        <p>
+           <?php 
+            $cars=array("Volvo","BMW","Toyota","Honda","Mercedes","Farari");
+            $result=array_pop($cars);
+            ?> 
+            <pre><?php print_r ($result); ?></pre>
+
+        </p>
+      </div>
+
+      
+      <div class="card">
+        <h3>This Array Push function used to add new elemnet of array</h3>
+        <p>
+           <?php 
+            $input=array("Volvo","BMW");
+            $result=array_push($input, "Toyota","Honda","Mercedes","Farari" );
+            ?> 
+            <pre><?php print_r ($result); ?></pre>
+
+        </p>
+      </div>
+      
+      </div>
 
 
+     
 
 
     <!-- Optional JavaScript -->
