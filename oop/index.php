@@ -46,8 +46,8 @@
 			<div class="col-sm">
 				<div class="card">
 					<div class="card-body text-center">
-						<h5 class="card-title">Inheritance Class</h5>
-						<p class="card-text"><a href="/php/oop">Example of Inheritance</a></p>
+						<h5 class="card-title">Iteration in OOP</h5>
+						<p class="card-text"><a href="/php/oop">Example of Iteration</a></p>
 					</div>
 				</div>
 			</div>
