@@ -30,8 +30,8 @@
 			<div class="col-sm">
 				<div class="card">
 					<div class="card-body text-center">
-						<h5 class="card-title">Abastract Class</h5>
-						<p class="card-text"><a href="/php/oop">Example of Abastract</a></p>
+						<h5 class="card-title">PHP Method chaining</h5>
+						<p class="card-text"><a href="/php/oop/chainmethod.php">Example of Chain Method</a></p>
 					</div>
 				</div>
 			</div>
