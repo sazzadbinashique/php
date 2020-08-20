@@ -1,32 +1,37 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php
+include('template-parts/header.php');
+?>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">PHP Mailer</h5>
+                    <p class="card-text text-center"><a href="/php/contact">Contact Form With SMTP</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="card-title text-center">OOP</h5>
+                    <p class="card-text text-center"><a href="/php/oop">Learn Object oriented php</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Phone Validation</h5>
+                    <p class="card-text text-center"><a href="/php/oop">Phone Validation With Regular Expression</a></p>
+                </div>
+            </div>
+        </div>
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    </div>
 
-	<title>PHP Learning</title>
-</head>
-<body>
+</div>
 
-	<div class="container-fluid">
-		<div class="card" style="width: 18rem;">
-			<div class="card-body">
-				<h5 class="card-title">OOP</h5>
-				<p class="card-text"><a href="/php/oop">Learn Object oriented php</a></p>
-			</div>
-		</div>
-	</div>
-	
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-</body>
-</html>
-
+<?php
+include('template-parts/footer.php');
+?>
