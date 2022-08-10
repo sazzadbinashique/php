@@ -27,6 +27,14 @@ include('template-parts/header.php');
                 </div>
             </div>
         </div>
+        <div class="col-lg-4 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Multidimentional Array sum</h5>
+                    <p class="card-text text-center"><a href="/php/array">Multidimentional Array sum</a></p>
+                </div>
+            </div>
+        </div>
 
     </div>
 
