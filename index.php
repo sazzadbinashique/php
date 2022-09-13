@@ -35,6 +35,14 @@ include('template-parts/header.php');
                 </div>
             </div>
         </div>
+        <div class="col-lg-4 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Interview Solution</h5>
+                    <p class="card-text text-center"><a href="/php/sazzad/solution">Interview</a></p>
+                </div>
+            </div>
+        </div>
 
     </div>
 
