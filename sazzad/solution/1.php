@@ -19,17 +19,22 @@ $str = $data['data'];
 preg_match_all("/([^,= ]+)=([^,= ]+)/", $str, $r);
 
 foreach ($r[2] as $key =>$value){
-    if ($key/2 ==0){
-        continue;
-    }else{
-        echo $value;
-    };
+    if( $key % 2 == 0 ) {
+        unset($r[2][$key]);
+    }
+}
+sort($r[2]);
+$total= count($r[2]);
+foreach (array_unique($r[2] )as $v){
+    if ($v> 60){
+        echo '<pre>';
+        print_r(($v));
+        echo '</pre>';
+    }
+
 }
 
-echo '<pre>';
-echo 'Output:<br>';
-print_r($key);
-echo '</pre>';
+
 ?>
 
 <a class="btn btn-primary" href="index.php">Go Back</a>
