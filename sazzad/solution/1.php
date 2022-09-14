@@ -15,12 +15,20 @@ $response = curl_exec($ch);
 curl_close($ch);
 $data = json_decode($response, true);
 $str = $data['data'];
+
 preg_match_all("/([^,= ]+)=([^,= ]+)/", $str, $r);
 
+foreach ($r[2] as $key =>$value){
+    if ($key/2 ==0){
+        continue;
+    }else{
+        echo $value;
+    };
+}
 
 echo '<pre>';
 echo 'Output:<br>';
-print_r($r);
+print_r($key);
 echo '</pre>';
 ?>
 
