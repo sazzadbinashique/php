@@ -16,10 +16,6 @@ curl_close($ch);
 $data = json_decode($response, true);
 /*$str = $data['data'];
 
-echo '<pre>';
-print_r (explode(",",$str));
-
-echo '</pre>';
 preg_match_all("/([^,= ]+)=([^,= ]+)/", $str, $r);
 
 foreach ($r[2] as $key =>$value){
@@ -60,6 +56,20 @@ foreach (array_unique($r[2] )as $v){
  }
 
 
+
+
+//solution two
+
+/*$string = 'key=>value1,key=>value2,key=>value3, key=>value3, key=>value3,key=>value3';
+$pairs = explode(',', $string);*/
+/*$data = array();
+foreach ($pairs as $pair) {
+    list($key, $value) = explode('=>', $pair);
+    $data[$key] = $value;
+}*/
+/*echo '<pre>';
+print_r(($pairs));
+echo '</pre>';*/
 
 
 
