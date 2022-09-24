@@ -14,8 +14,12 @@ curl_setopt($ch, CURLOPT_HEADER, 0);
 $response = curl_exec($ch);
 curl_close($ch);
 $data = json_decode($response, true);
-$str = $data['data'];
+/*$str = $data['data'];
 
+echo '<pre>';
+print_r (explode(",",$str));
+
+echo '</pre>';
 preg_match_all("/([^,= ]+)=([^,= ]+)/", $str, $r);
 
 foreach ($r[2] as $key =>$value){
@@ -25,6 +29,7 @@ foreach ($r[2] as $key =>$value){
 }
 sort($r[2]);
 $total= count($r[2]);
+print_r($total);
 foreach (array_unique($r[2] )as $v){
     if ($v> 60){
         echo '<pre>';
@@ -32,7 +37,30 @@ foreach (array_unique($r[2] )as $v){
         echo '</pre>';
     }
 
-}
+}*/
+// string data to find number of speed greater than 60  and less than 80
+ if ($data['data'] != null){
+     $str = $data['data'];
+     preg_match_all("/([^,= ]+)=([^,= ]+)/", $str, $r);
+     foreach ($r[2] as $key =>$value){
+         if( $key % 2 == 0 ) {
+             unset($r[2][$key]);
+         }
+     }
+     sort($r[2]);
+     $total= count($r[2]);
+     foreach (array_unique($r[2] )as $v){
+         if ($v> 60 && $v < 80){
+             echo '<pre>';
+             print_r(($v));
+             echo '</pre>';
+         }
+
+     }
+ }
+
+
+
 
 
 ?>
